@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lmbtfy.Web", "Lmbtfy.Web\Lmbtfy.Web.csproj", "{EB5F205E-1C55-4E2F-99F8-1E97BF6F285F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{79FC62C3-0655-4E59-B142-B505454D42ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB5F205E-1C55-4E2F-99F8-1E97BF6F285F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5F205E-1C55-4E2F-99F8-1E97BF6F285F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5F205E-1C55-4E2F-99F8-1E97BF6F285F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5F205E-1C55-4E2F-99F8-1E97BF6F285F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79FC62C3-0655-4E59-B142-B505454D42ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79FC62C3-0655-4E59-B142-B505454D42ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79FC62C3-0655-4E59-B142-B505454D42ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79FC62C3-0655-4E59-B142-B505454D42ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
