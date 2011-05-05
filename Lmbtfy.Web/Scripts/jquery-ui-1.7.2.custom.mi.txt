@@ -1,0 +1,4 @@
+FILE QUARANTINED
+
+Microsoft IT has removed Lmbtfy.rar->Lmbtfy\Lmbtfy.Web\Scripts\jquery-ui-1.7.2.custom.min.js since it
+has been found to match the FILE FILTER= unnamed: <in>*.js file filter.
