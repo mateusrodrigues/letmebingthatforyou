@@ -86,4 +86,6 @@
         </td>
       </tr>
     </table>
+
+    <!--<%= Request.Url.GetComponents(UriComponents.SchemeAndServer, UriFormat.Unescaped) %>-->
 </asp:Content>
