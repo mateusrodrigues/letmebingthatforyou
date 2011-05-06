@@ -25,10 +25,10 @@ namespace UnitTests
             var urlHelper = new UrlHelper(requestContext, routes);
 
             // act
-            var url = urlHelper.RouteUrl("Search", new {predicate = "searchterm"});
+            var url = urlHelper.RouteUrl("Search", new {q = "searchterm"});
 
             // assert
-            Assert.AreEqual("/searchterm", url);
+            Assert.AreEqual("/?q=searchterm", url);
         }
     }
 }
