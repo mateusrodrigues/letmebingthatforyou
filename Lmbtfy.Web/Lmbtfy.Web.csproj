@@ -75,12 +75,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bg\hills.jpg" />
+    <Content Include="Content\bg\hills.meta.txt" />
     <Content Include="Content\bg\landscape.jpg" />
+    <Content Include="Content\bg\landscape.meta.txt" />
+    <Content Include="Content\bg\sea.jpg" />
+    <Content Include="Content\bg\sea.meta.txt" />
+    <Content Include="Content\bg\trees.jpg" />
+    <Content Include="Content\bg\trees.meta.txt" />
     <Content Include="Content\Bing.css" />
     <Content Include="Content\buttonbg.png" />
     <Content Include="Content\mouse_pointer.gif" />
     <Content Include="Content\resultbg.png" />
     <Content Include="Content\Site.css" />
+    <Content Include="Error.html" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />

@@ -20,4 +20,4 @@
 body ul.credits li a{text-decoration:underline;color:#77c;font-weight:bold;}
 .instructions{font-weight:bold;margin-top:4px;text-align:center;font-size:1.2em;border:solid 1px #000;background-color:#445566;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;position:relative;height:30px;}
 .instructions span{position:absolute;top:5px;left:20px;filter:alpha(opacity=100);-moz-opacity:1.0;opacity:1.0;}
-#bgDiv { BACKGROUND-IMAGE: url(/Content/bg/landscape.jpg); BACKGROUND-REPEAT: no-repeat; }#bgDivFull { BACKGROUND-IMAGE: url(/Content/bg/landscape.jpg); BACKGROUND-REPEAT: no-repeat; }
+#bgDiv { BACKGROUND-IMAGE: url(/Content/bg/trees.jpg); BACKGROUND-REPEAT: no-repeat; }#bgDivFull { BACKGROUND-IMAGE: url(/Content/bg/landscape.jpg); BACKGROUND-REPEAT: no-repeat; }
