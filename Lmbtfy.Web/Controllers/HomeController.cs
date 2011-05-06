@@ -26,7 +26,7 @@ namespace Lmbtfy.Web.Controllers
         public ActionResult GenerateUrl(string q)
         {
             string virtualPath = Url.RouteUrl("Search", new {q, Controller = "Home", Action="Index"});
-            string url = new Uri(Request.Url, virtualPath).ToString();
+            string url = Url.ToPublicUrl(virtualPath);
             string tinyUrl = GenerateTinyUrl(url);
 
             return PartialView("GenerateUrl", new GeneratedUrlModel{Url = url, TinyUrl = tinyUrl });
@@ -44,6 +44,25 @@ namespace Lmbtfy.Web.Controllers
             {
                 return sr.ReadToEnd();
             }
+        }
+    }
+
+    public static class Helpers {
+        public static string ToPublicUrl(this UrlHelper urlHelper, string relativeUri) {
+            var httpContext = urlHelper.RequestContext.HttpContext;
+
+            var uriBuilder = new UriBuilder {
+                Host = httpContext.Request.Url.Host,
+                Path = "/",
+                Port = 80,
+                Scheme = "http",
+            };
+
+            if (httpContext.Request.IsLocal) {
+                uriBuilder.Port = httpContext.Request.Url.Port;
+            }
+
+            return new Uri(uriBuilder.Uri, relativeUri).AbsoluteUri;
         }
     }
 }
