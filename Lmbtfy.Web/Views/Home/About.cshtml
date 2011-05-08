@@ -1,0 +1,58 @@
+@{
+    ViewBag.Title = "About Let me Bing that for you!";
+}
+
+@section Header {
+    <meta name="description" content="About Let me Bing that for you! and it's authors." />
+}
+
+<div id="bodyFull">
+    <div id="bgDivFull"></div>
+        
+    <div id="sw_hdr">
+        <div class="sw_tb">
+            <div class="sw_tb_content">
+                &nbsp;&nbsp;@Html.ActionLink("LMBTFY", "Index")
+                &nbsp;|&nbsp;&nbsp;@Html.ActionLink("About...", "About")
+            </div>
+            <div style="clear:both">
+            </div>
+        </div>
+        <div class="sw_tbb">
+        </div>
+    </div>
+            
+    <div id="bingLogoFull">
+        <div class="let_me">Let me</div>
+        <div class="sw_logo">Bing</div>
+        <div class="that_for_you">that for you!</div>
+    </div>
+
+    <div id="contentFull">
+        <h1>About <span class="brand">Let me Bing that for you</span>!</h1>
+        <p>
+            Despite what our well intentioned teachers told us in elementary school, 
+            <em>there is such a thing as a stupid question</em>. And stupid questions deserve 
+            snarky answers.
+        </p>
+        <p>
+            <span class="brand">Let me Bing that for you</span> is for all those people that love 
+            to bother you with their question rather than simply Bing it themselves. While answering 
+            such questions in a funny manner, you&#8217;re also educating those people on how to use 
+            search. &#8220;Teach a man to fish&#8221; as they say. :)
+        </p>
+        <ul class="credits">
+            <li>Development: <a href="http://blog.maartenballiauw.be/" title="Maarten's Blog">Maarten Balliauw</a>, <a href="http://hanssens.org/" title="JHannsen's blog">Juliën Hanssens</a>, <a href="http://haacked.com/" title="You've been Haacked">Phil Haack</a></li>
+            <li>Inspiration: <a href="http://www.lmgtfy.com" title="Let me Google that for you">Let me Google that for you</a></li>
+            <li>Contact: <a href="http://haacked.com/contact.aspx" title="Contact Phil">Phil Haack</a></li>
+        </ul>
+        <p class="disclaimer">
+            <strong><em>Let me Bing that for you is in no way associated with Microsoft nor Bing.</em></strong> 
+            It&#8217;s just something we did for fun.
+        </p>
+        <p class="copyright">
+            The Bing image and logo is copyright &#169; @DateTime.Now.Year Microsoft.
+        </p>
+            
+    </div>
+</div>
