@@ -1,21 +1,28 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Web.Mvc;
 using Lmbtfy.Web.Models;
 
 namespace Lmbtfy.Web.Controllers {
-    [HandleError]
     public class HomeController : Controller {
+        public ImageMetadata _imageOfTheDay;
+
+        public HomeController(ImageMetadata imageOfTheDay) {
+            _imageOfTheDay = imageOfTheDay;
+        }
+
         public ActionResult About() {
             return View();
         }
 
         public ActionResult Index(string q) {
             if (string.IsNullOrEmpty(q)) {
-                return View();
+                return View(_imageOfTheDay);
             }
-            return View("BingThis", (object)q);
+            ViewBag.Question = q;
+            return View("BingThis", _imageOfTheDay);
         }
 
         public ActionResult GenerateUrl(string q) {
@@ -36,6 +43,14 @@ namespace Lmbtfy.Web.Controllers {
             using (var sr = new StreamReader(response.GetResponseStream())) {
                 return sr.ReadToEnd();
             }
+        }
+
+        public ActionResult BackgroundImageCss() {
+            var imageMetadata = ImageMetadata.GetImageMetadata(Server, "/Content/bg/hills.jpg");
+            string imageCss = @"#bgDiv {{ BACKGROUND-IMAGE: url({0}); BACKGROUND-REPEAT: no-repeat; }}
+#bgDivFull {{ BACKGROUND-IMAGE: url({0}); BACKGROUND-REPEAT: no-repeat; }}";
+            imageCss = String.Format(CultureInfo.InvariantCulture, imageCss, imageMetadata.ImageUrl);
+            return Content(imageCss, "text/css");
         }
     }
 

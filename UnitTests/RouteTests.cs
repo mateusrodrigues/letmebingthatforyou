@@ -3,17 +3,13 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Lmbtfy.Web;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using Xunit;
 
-namespace UnitTests
-{
-    [TestClass]
-    public class RouteTests
-    {
-        [TestMethod]
-        public void RouteUrl_ByName_ReturnsSearchUrl()
-        {
+namespace UnitTests {
+    public class RouteTests {
+        [Fact]
+        public void RouteUrl_ByName_ReturnsSearchUrl() {
             // arrange
             var routes = new RouteCollection();
             MvcApplication.RegisterRoutes(routes);
@@ -25,10 +21,10 @@ namespace UnitTests
             var urlHelper = new UrlHelper(requestContext, routes);
 
             // act
-            var url = urlHelper.RouteUrl("Search", new {q = "searchterm"});
+            var url = urlHelper.RouteUrl("Search", new { q = "searchterm" });
 
             // assert
-            Assert.AreEqual("/?q=searchterm", url);
+            Assert.Equal("/?q=searchterm", url);
         }
     }
 }

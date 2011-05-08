@@ -12,7 +12,7 @@
     <RootNamespace>Lmbtfy.Web</RootNamespace>
     <AssemblyName>Lmbtfy.Web</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <MvcBuildViews>true</MvcBuildViews>
+    <MvcBuildViews>false</MvcBuildViews>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -41,6 +41,14 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.2.2.1.4\lib\net40-Full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc">
+      <HintPath>..\packages\Ninject.MVC3.2.2.2.0\lib\net40-Full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -57,25 +65,34 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebActivator">
+      <HintPath>..\packages\WebActivator.1.4.1\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\NinjectMVC3.cs" />
     <Compile Include="Controllers\BingImageCssController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\GeneratedUrlModel.cs" />
+    <Compile Include="Models\ImageMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DirectoryService.cs" />
+    <Compile Include="Services\IDirectoryService.cs" />
+    <Compile Include="Services\ImageRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bg\hills.jpg" />
-    <Content Include="Content\bg\hills.meta.txt" />
+    <None Include="Content\bg\hills.jpg.meta" />
     <Content Include="Content\bg\landscape.jpg" />
-    <Content Include="Content\bg\landscape.meta.txt" />
+    <None Include="Content\bg\landscape.jpg.meta" />
     <Content Include="Content\bg\sea.jpg" />
-    <Content Include="Content\bg\sea.meta.txt" />
+    <None Include="Content\bg\sea.jpg.meta" />
     <Content Include="Content\bg\trees.jpg" />
-    <Content Include="Content\bg\trees.meta.txt" />
+    <None Include="Content\bg\trees.jpg.meta" />
     <Content Include="Content\Bing.css" />
     <Content Include="Content\buttonbg.png" />
     <Content Include="Content\mouse_pointer.gif" />

@@ -30,7 +30,7 @@
 
                             $(".step3").show("drop", function() {
                                 if (jQuery.browser.msie) { this.style.removeAttribute('filter'); }
-                                type(unescape('@Ajax.JavaScriptStringEncode(Model)'), 0);
+                                type(unescape('@Ajax.JavaScriptStringEncode(ViewBag.Question)'), 0);
                             });
                         });
                     });
