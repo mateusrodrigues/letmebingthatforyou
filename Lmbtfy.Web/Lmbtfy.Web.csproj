@@ -120,6 +120,7 @@
     <Content Include="Scripts\jquery-ui-1.8.12.js" />
     <Content Include="Scripts\jquery-ui-1.8.12.min.js" />
     <Content Include="packages.config" />
+    <Content Include="Scripts\lmbtfy.js" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\BingThis.cshtml" />
     <Content Include="Views\Home\_GenerateUrl.cshtml" />

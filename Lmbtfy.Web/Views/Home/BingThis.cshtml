@@ -4,70 +4,12 @@
 
 @section Header {
     <script type="text/javascript">
-        var displayContainer;
-        var searchQuery;
-        var searchButton;
-        var fakeMouse;
-
-        $(function() {
-            displayContainer = $("#lmbtfyResult");
-            searchQuery = $("#sb_form_q");
-            searchButton = $("#sb_form_go");
-            fakeMouse = $("#fake_mouse");
-            displayContainer.show("bounce", "fast", function() {
-                if (jQuery.browser.msie) { this.style.removeAttribute('filter'); }
-                $(".step1").show("drop", function() {
-                    if (jQuery.browser.msie) { this.style.removeAttribute('filter'); }
-                    $(".step2").show("drop", function() {
-                    if (jQuery.browser.msie) { this.style.removeAttribute('filter'); }
-                        fakeMouse.show("bounce");
-                        fakeMouse.animate({
-                            top: (searchQuery.offset().top + 15) + "px",
-                            left: (searchQuery.offset().left + 10) + "px"
-                        }, 1500, 'swing', function() {
-                            searchQuery.focus();
-                            fakeMouse.animate({ top: "+=18px", left: "+=10px" }, "fast");
-
-                            $(".step3").show("drop", function() {
-                                if (jQuery.browser.msie) { this.style.removeAttribute('filter'); }
-                                type(unescape('@Ajax.JavaScriptStringEncode(ViewBag.Question)'), 0);
-                            });
-                        });
-                    });
-                });
-            });
-        });
-
-        // this method was stolen from lmgtfy.com.
-        // credits: http://twitter.com/coderifous
-        // thanks!
-        function type(string, index) {
-            var val = string.substr(0, index + 1);
-            searchQuery.attr('value', val);
-            if (index < string.length) {
-                setTimeout(function() { type(string, index + 1); }, Math.random() * 240);
-            }
-            else {
-                doneTyping();
-            }
-        }
-
-        function doneTyping() {
-            $(".step4").show("drop", function() {
-                if (jQuery.browser.msie) { this.style.removeAttribute('filter'); }
-                fakeMouse.animate({
-                    top: (searchButton.offset().top + 10) + "px",
-                    left: (searchButton.offset().left + 10) + "px"
-                }, 2000, 'swing', function() {
-                    searchButton.click();
-                });
-            });
-        }
+        var query = unescape('@Ajax.JavaScriptStringEncode(ViewBag.Question)');        
     </script>
+    <script type="text/javascript" src="/scripts/lmbtfy.js"></script>
 }
 
-
-<img src="/Content/mouse_pointer.gif" id="fake_mouse" style="display: none;" />
+<img src="/Content/mouse_pointer.gif" id="fake_mouse" style="display: none;" alt="Fake Mouse Pointer" />
     
 <div class="sc_grad">
     <div>
@@ -120,11 +62,11 @@
                                         <h1>Let me Bing that for you!</h1>
                                         <h2 class="step1">
                                             Here's how you can do it yourself...</h2>
-                                        <ol class="steps">
-                                            <li class="step2">Navigate to <a href="http://www.bing.com">Bing.com</a></li>
-                                            <li class="step3">Enter your search query</li>
-                                            <li class="step4">Click the button and behold the results!</li>
-                                        </ol>
+                                        <ul class="steps">
+                                            <li class="step2">1. Navigate to <a href="http://www.bing.com">Bing.com</a></li>
+                                            <li class="step3">2. Enter your search query</li>
+                                            <li class="step4">3. Click the button and behold the results!</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
