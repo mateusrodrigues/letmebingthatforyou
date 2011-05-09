@@ -30,7 +30,7 @@ namespace Lmbtfy.Web {
             );
         }
 
-        public void Start() {
+        protected void Application_Start() {
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }
