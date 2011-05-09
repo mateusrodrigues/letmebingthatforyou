@@ -73,8 +73,8 @@
     <Compile Include="App_Start\NinjectMVC3.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
-    <Compile Include="MvcApplication.cs">
-      <SubType>Code</SubType>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\GeneratedUrlModel.cs" />
     <Compile Include="Models\ImageMetadata.cs" />
@@ -82,23 +82,38 @@
     <Compile Include="Services\DirectoryService.cs" />
     <Compile Include="Services\IDirectoryService.cs" />
     <Compile Include="Services\ImageRepository.cs" />
-    <None Include="_AppStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bg\arches.jpg" />
+    <Content Include="Content\bg\balloons.jpg" />
+    <Content Include="Content\bg\beach.jpg" />
+    <Content Include="Content\bg\crossing.jpg" />
+    <Content Include="Content\bg\field.jpg" />
+    <Content Include="Content\bg\fieldtrees.jpg" />
     <Content Include="Content\bg\hills.jpg" />
     <Content Include="Content\bg\hills.jpg.meta" />
     <Content Include="Content\bg\landscape.jpg" />
     <Content Include="Content\bg\landscape.jpg.meta" />
+    <Content Include="Content\bg\nightsky.jpg" />
+    <Content Include="Content\bg\ocean.jpg" />
+    <Content Include="Content\bg\pool.jpg" />
+    <Content Include="Content\bg\rural.jpg" />
     <Content Include="Content\bg\sea.jpg" />
     <Content Include="Content\bg\sea.jpg.meta" />
+    <Content Include="Content\bg\snow.jpg" />
+    <Content Include="Content\bg\straw.jpg" />
+    <Content Include="Content\bg\sunset.jpg" />
+    <Content Include="Content\bg\tajmahal.jpg" />
     <Content Include="Content\bg\trees.jpg" />
     <Content Include="Content\bg\trees.jpg.meta" />
+    <Content Include="Content\bg\treesky.jpg" />
     <Content Include="Content\Bing.css" />
     <Content Include="Content\buttonbg.png" />
     <Content Include="Content\mouse_pointer.gif" />
     <Content Include="Content\resultbg.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Error.html" />
+    <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.6-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.js" />
     <Content Include="Scripts\jquery-1.6.min.js" />
@@ -116,6 +131,21 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <None Include="Content\bg\arches.jpg.meta" />
+    <None Include="Content\bg\balloons.jpg.meta" />
+    <None Include="Content\bg\beach.jpg.meta" />
+    <None Include="Content\bg\crossing.jpg.meta" />
+    <None Include="Content\bg\field.jpg.meta" />
+    <None Include="Content\bg\fieldtrees.jpg.meta" />
+    <None Include="Content\bg\nightsky.jpg.meta" />
+    <None Include="Content\bg\ocean.jpg.meta" />
+    <None Include="Content\bg\pool.jpg.meta" />
+    <None Include="Content\bg\rural.jpg.meta" />
+    <None Include="Content\bg\snow.jpg.meta" />
+    <None Include="Content\bg\straw.jpg.meta" />
+    <None Include="Content\bg\sunset.jpg.meta" />
+    <None Include="Content\bg\tajmahal.jpg.meta" />
+    <None Include="Content\bg\treesky.jpg.meta" />
     <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.WebPages.Razor.dll" />
     <None Include="_bin_deployableAssemblies\System.Web.WebPages.dll" />
