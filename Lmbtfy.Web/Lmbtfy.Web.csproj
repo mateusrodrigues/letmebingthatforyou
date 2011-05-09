@@ -74,7 +74,7 @@
     <Compile Include="Controllers\BingImageCssController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
-    <Compile Include="Global.asax.cs">
+    <Compile Include="MvcApplication.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\GeneratedUrlModel.cs" />
