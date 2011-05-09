@@ -1,8 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System.Web;
+using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace Lmbtfy.Web {
-    public class MvcApplication : System.Web.HttpApplication {
+    public class MvcApplication : HttpApplication {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters) {
             filters.Add(new HandleErrorAttribute());
         }
@@ -29,7 +30,7 @@ namespace Lmbtfy.Web {
             );
         }
 
-        protected void Application_Start() {
+        public void Start() {
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
         }

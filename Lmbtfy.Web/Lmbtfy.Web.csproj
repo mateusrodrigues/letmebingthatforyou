@@ -75,7 +75,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\GeneratedUrlModel.cs" />
     <Compile Include="Models\ImageMetadata.cs" />
@@ -83,6 +83,7 @@
     <Compile Include="Services\DirectoryService.cs" />
     <Compile Include="Services\IDirectoryService.cs" />
     <Compile Include="Services\ImageRepository.cs" />
+    <None Include="_AppStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bg\hills.jpg" />
@@ -99,7 +100,6 @@
     <Content Include="Content\resultbg.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Error.html" />
-    <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.6-vsdoc.js" />
     <Content Include="Scripts\jquery-1.6.js" />
     <Content Include="Scripts\jquery-1.6.min.js" />
