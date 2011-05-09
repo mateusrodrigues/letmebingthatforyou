@@ -86,13 +86,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bg\hills.jpg" />
-    <None Include="Content\bg\hills.jpg.meta" />
+    <Content Include="Content\bg\hills.jpg.meta" />
     <Content Include="Content\bg\landscape.jpg" />
-    <None Include="Content\bg\landscape.jpg.meta" />
+    <Content Include="Content\bg\landscape.jpg.meta" />
     <Content Include="Content\bg\sea.jpg" />
-    <None Include="Content\bg\sea.jpg.meta" />
+    <Content Include="Content\bg\sea.jpg.meta" />
     <Content Include="Content\bg\trees.jpg" />
-    <None Include="Content\bg\trees.jpg.meta" />
+    <Content Include="Content\bg\trees.jpg.meta" />
     <Content Include="Content\Bing.css" />
     <Content Include="Content\buttonbg.png" />
     <Content Include="Content\mouse_pointer.gif" />
