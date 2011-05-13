@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Web.Mvc;
 using Lmbtfy.Web.Models;
+using System.Web;
 
 namespace Lmbtfy.Web.Controllers {
     public class HomeController : Controller {
@@ -46,7 +47,9 @@ namespace Lmbtfy.Web.Controllers {
         }
 
         public ActionResult BackgroundImageCss() {
-            var imageMetadata = ImageMetadata.GetImageMetadata(Server, "/Content/bg/hills.jpg");
+            var imageUrl = VirtualPathUtility.ToAbsolute(_imageOfTheDay.ImageUrl);
+
+            var imageMetadata = ImageMetadata.GetImageMetadata(Server, imageUrl);
             string imageCss = @"#bgDiv {{ BACKGROUND-IMAGE: url({0}); BACKGROUND-REPEAT: no-repeat; }}
 #bgDivFull {{ BACKGROUND-IMAGE: url({0}); BACKGROUND-REPEAT: no-repeat; }}";
             imageCss = String.Format(CultureInfo.InvariantCulture, imageCss, imageMetadata.ImageUrl);
