@@ -2,9 +2,9 @@
 using System.Globalization;
 using System.IO;
 using System.Net;
+using System.Web;
 using System.Web.Mvc;
 using Lmbtfy.Web.Models;
-using System.Web;
 
 namespace Lmbtfy.Web.Controllers {
     public class HomeController : Controller {
@@ -39,6 +39,7 @@ namespace Lmbtfy.Web.Controllers {
             var request = (HttpWebRequest)WebRequest.Create("http://tinyurl.com/api-create.php?url=" + realUrl);
 
             // execute the request
+            request.AllowAutoRedirect = false;
             var response = (HttpWebResponse)request.GetResponse();
 
             using (var sr = new StreamReader(response.GetResponseStream())) {
