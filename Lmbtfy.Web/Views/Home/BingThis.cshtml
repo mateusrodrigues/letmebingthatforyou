@@ -4,7 +4,8 @@
 
 @section Header {
     <script type="text/javascript">
-        var query = unescape('@Ajax.JavaScriptStringEncode(ViewBag.Question)');        
+        var query = unescape('@Ajax.JavaScriptStringEncode(ViewBag.Question)');
+        query = query.replace('&quot;', '"');
     </script>
     <script type="text/javascript" src="/scripts/lmbtfy.js"></script>
 }
