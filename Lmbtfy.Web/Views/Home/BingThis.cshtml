@@ -1,11 +1,11 @@
 ﻿@{
     ViewBag.Title = "Let me Bing that for you!";
+    var query = new HtmlString(Ajax.JavaScriptStringEncode(ViewBag.Question));
 }
 
 @section Header {
     <script type="text/javascript">
-        var query = unescape('@Ajax.JavaScriptStringEncode(ViewBag.Question)');
-        query = query.replace('&quot;', '"');
+        var query = unescape('@query');
     </script>
     <script type="text/javascript" src="/scripts/lmbtfy.js"></script>
 }
