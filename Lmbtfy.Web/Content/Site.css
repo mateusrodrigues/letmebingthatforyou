@@ -16,6 +16,8 @@
 #contentFull p{width:400px;}
 #contentFull, #contentFull a, #contentFull a.active, #contentFull a.visited{color:Black;}
 .disclaimer{color:#333;font-size:1.1em;}
+.hosting {display:block;clear: both;float: right;}
+.hosting a {color:#777;font-size:1.1em;font-style: italic}
 .brand{color:#459;}
 body ul.credits li a{text-decoration:underline;color:#77c;font-weight:bold;}
 .instructions{font-weight:bold;margin-top:4px;text-align:center;font-size:1.2em;border:solid 1px #000;background-color:#445566;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;position:relative;height:30px;}
