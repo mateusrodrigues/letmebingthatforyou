@@ -6,10 +6,13 @@ using Lmbtfy.Web;
 using Moq;
 using Xunit;
 
-namespace UnitTests {
-    public class RouteTests {
+namespace Lmbtfy.UnitTests
+{
+    public class RouteTests
+    {
         [Fact]
-        public void RouteUrl_ByName_ReturnsSearchUrl() {
+        public void RouteUrl_ByName_ReturnsSearchUrl()
+        {
             // arrange
             var routes = new RouteCollection();
             MvcApplication.RegisterRoutes(routes);

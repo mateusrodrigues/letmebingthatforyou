@@ -7,10 +7,13 @@ using Moq;
 using UnitTests.Extensions;
 using Xunit;
 
-namespace UnitTests.Services {
-    public class ImageRepositoryTests {
+namespace Lmbtfy.UnitTests.Services
+{
+    public class ImageRepositoryTests
+    {
         [Fact]
-        public void GetImages_ReturnsAllImages() {
+        public void GetImages_ReturnsAllImages()
+        {
             // Arrange
             var server = new Mock<HttpServerUtilityBase>();
             server.Setup(s => s.MapPath("/images/bg")).Returns(@"c:\web\bg").Verifiable();

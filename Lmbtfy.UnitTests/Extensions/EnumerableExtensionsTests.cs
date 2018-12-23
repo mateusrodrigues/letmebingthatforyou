@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using Lmbtfy.Web.Extensions;
 using Xunit;
 
-namespace UnitTests.Extensions {
-    public class EnumerableExtensionsTests {
+namespace Lmbtfy.UnitTests.Extensions
+{
+    public class EnumerableExtensionsTests
+    {
         [Fact]
-        public void GetItemOfTheDay_WithNullEnumerable_ThrowsArgumentNullException() {
+        public void GetItemOfTheDay_WithNullEnumerable_ThrowsArgumentNullException()
+        {
             // arrange
             var items = (IEnumerable<object>)null;
 
@@ -16,7 +19,8 @@ namespace UnitTests.Extensions {
         }
 
         [Fact]
-        public void GetItemOfTheDay_WithOneItem_ReturnsSameItem() {
+        public void GetItemOfTheDay_WithOneItem_ReturnsSameItem()
+        {
             // arrange
             var items = new[] { 42 };
 
@@ -30,7 +34,8 @@ namespace UnitTests.Extensions {
         }
 
         [Fact]
-        public void GetItemOfTheDay_WithMoreThanOneItem_ReturnsSameItemForSameDay() {
+        public void GetItemOfTheDay_WithMoreThanOneItem_ReturnsSameItemForSameDay()
+        {
             // arrange
             var items = new[] { 42, 8, 32 };
             var date = DateTime.MinValue;
@@ -47,7 +52,8 @@ namespace UnitTests.Extensions {
         }
 
         [Fact]
-        public void GetItemOfTheDay_WithMoreThanOneItem_ReturnsDifferentItemForDifferentDay() {
+        public void GetItemOfTheDay_WithMoreThanOneItem_ReturnsDifferentItemForDifferentDay()
+        {
             // arrange
             var items = new[] { 42, 8, 32 };
             var date = DateTime.MinValue;
@@ -64,7 +70,8 @@ namespace UnitTests.Extensions {
         }
 
         [Fact]
-        public void GetItemOfTheDay_CalledWithMoreDaysThanItems_GoesBackToFirstItem() {
+        public void GetItemOfTheDay_CalledWithMoreDaysThanItems_GoesBackToFirstItem()
+        {
             // arrange
             var items = new[] { 42, 8, 32 };
             var date = DateTime.MinValue;

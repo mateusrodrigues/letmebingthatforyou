@@ -2,7 +2,7 @@
 using Lmbtfy.Web.Models;
 using Xunit;
 
-namespace UnitTests
+namespace Lmbtfy.UnitTests.Controllers
 {
     public class HomeControllerTests
     {

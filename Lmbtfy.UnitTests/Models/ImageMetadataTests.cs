@@ -5,10 +5,13 @@ using Moq;
 using UnitTests.Extensions;
 using Xunit;
 
-namespace UnitTests.Models {
-    public class ImageMetadataTests {
+namespace Lmbtfy.UnitTests.Models
+{
+    public class ImageMetadataTests
+    {
         [Fact]
-        public void ImageMetadataPopulatesSelfFromReader() {
+        public void ImageMetadataPopulatesSelfFromReader()
+        {
             // arrange
             var reader = new Mock<TextReader>();
             reader.Setup(r => r.ReadLine()).ReturnsInOrder("http://license-url/", "license type", "http://image-url/", "Author", new InvalidOperationException());
