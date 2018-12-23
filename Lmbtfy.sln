@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lmbtfy.Web", "Lmbtfy.Web\Lm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{79FC62C3-0655-4E59-B142-B505454D42ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lmbtfy.UnitTests", "Lmbtfy.UnitTests\Lmbtfy.UnitTests.csproj", "{105BCCA6-CA32-4BA7-BBC4-5E300706AFB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{79FC62C3-0655-4E59-B142-B505454D42ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79FC62C3-0655-4E59-B142-B505454D42ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79FC62C3-0655-4E59-B142-B505454D42ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105BCCA6-CA32-4BA7-BBC4-5E300706AFB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105BCCA6-CA32-4BA7-BBC4-5E300706AFB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105BCCA6-CA32-4BA7-BBC4-5E300706AFB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105BCCA6-CA32-4BA7-BBC4-5E300706AFB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

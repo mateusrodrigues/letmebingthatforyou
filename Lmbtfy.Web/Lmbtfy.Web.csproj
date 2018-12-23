@@ -53,11 +53,6 @@
     <None Include="wwwroot\images\buttonbg.png" />
     <None Include="wwwroot\images\mouse_pointer.gif" />
     <None Include="wwwroot\images\resultbg.png" />
-    <None Include="wwwroot\js\jquery-1.6.3-vsdoc.js" />
-    <None Include="wwwroot\js\jquery-1.6.3.js" />
-    <None Include="wwwroot\js\jquery-1.6.3.min.js" />
-    <None Include="wwwroot\js\jquery-ui-1.8.16.js" />
-    <None Include="wwwroot\js\jquery-ui-1.8.16.min.js" />
     <None Include="wwwroot\js\lmbtfy.js" />
     <None Include="wwwroot\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <None Include="wwwroot\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />

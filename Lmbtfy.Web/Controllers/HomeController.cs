@@ -27,7 +27,8 @@ namespace Lmbtfy.Web.Controllers
 
         public ActionResult Index(string q)
         {
-            if (string.IsNullOrEmpty(q)) {
+            if (string.IsNullOrEmpty(q))
+            {
                 return View(_imageOfTheDay);
             }
             ViewBag.Question = q;
