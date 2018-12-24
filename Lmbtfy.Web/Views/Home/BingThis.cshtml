@@ -1,6 +1,6 @@
 ﻿@{
     ViewBag.Title = "Let me Bing that for you!";
-    var query = new HtmlString(Ajax.JavaScriptStringEncode(ViewBag.Question));
+    var query = new Microsoft.AspNetCore.Html.HtmlString(System.Text.Encodings.Web.JavaScriptEncoder.Default.Encode(ViewBag.Question));
 }
 
 @section Header {
@@ -11,12 +11,12 @@
 }
 
 <img src="/Content/mouse_pointer.gif" id="fake_mouse" style="display: none;" alt="Fake Mouse Pointer" />
-    
+
 <div class="sc_grad">
     <div>
     </div>
 </div>
-    
+
 <table class="layout">
     <tr>
         <td align="center" class="layout">
@@ -34,35 +34,38 @@
                         <div id="sw_content">
                             <div class="sw_sform">
                                 <div class="let_me">
-                                    Let me</div>
+                                    Let me
+                                </div>
                                 <div class="sw_logo">
                                     Bing
                                 </div>
                                 <div class="that_for_you">
-                                    that for you!</div>
+                                    that for you!
+                                </div>
                                 <div class="sw_mbrand">
                                 </div>
                                 <div class="beta">
                                 </div>
                                 <div class="search_controls">
                                     <form method="get" class="sw_box" id="sb_form" action="http://www.bing.com/search">
-                                    <div class="sw_bd">
-                                        <div class="sw_b">
-                                            <input class="sw_qbox" id="sb_form_q" name="q" title="Enter your search term" type="text"
-                                                value="" />
-                                            <input class="sw_qbtn" id="sb_form_go" name="go" tabindex="0" title="Search" type="submit"
-                                                value="" />
+                                        <div class="sw_bd">
+                                            <div class="sw_b">
+                                                <input class="sw_qbox" id="sb_form_q" name="q" title="Enter your search term" type="text"
+                                                       value="" />
+                                                <input class="sw_qbtn" id="sb_form_go" name="go" tabindex="0" title="Search" type="submit"
+                                                       value="" />
+                                            </div>
+                                            <div id="sw_as">
+                                            </div>
                                         </div>
-                                        <div id="sw_as">
-                                        </div>
-                                    </div>
                                     </form>
                                 </div>
                                 <div id="lmbtfyResult" style="background-color: #fff;">
                                     <div>
                                         <h1>Let me Bing that for you!</h1>
                                         <h2 class="step1">
-                                            Here's how you can do it yourself...</h2>
+                                            Here's how you can do it yourself...
+                                        </h2>
                                         <ul class="steps">
                                             <li class="step2">1. Navigate to <a href="http://www.bing.com">Bing.com</a></li>
                                             <li class="step3">2. Enter your search query</li>

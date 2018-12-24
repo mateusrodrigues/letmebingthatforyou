@@ -2,22 +2,29 @@
 using System.Web;
 using System;
 
-namespace Lmbtfy.Web.Models {
-    public class ImageMetadata {
-        public ImageMetadata(string imageUrl) {
+namespace Lmbtfy.Web.Models
+{
+    public class ImageMetadata
+    {
+        public ImageMetadata(string imageUrl)
+        {
             ImageUrl = imageUrl;
         }
 
-        public static ImageMetadata GetImageMetadata(HttpServerUtilityBase server, string imageUrl) {
-            string path = server.MapPath(imageUrl + ".meta");
+        public static ImageMetadata GetImageMetadata(string imageUrl)
+        {
+            string path = imageUrl + ".meta";
 
-            using (var reader = new StreamReader(path)) {
+            using (var reader = new StreamReader(path))
+            {
                 return new ImageMetadata(imageUrl, reader);
             }
         }
 
-        public ImageMetadata(string imageUrl, TextReader reader) {
-            if (reader == null) {
+        public ImageMetadata(string imageUrl, TextReader reader)
+        {
+            if (reader == null)
+            {
                 throw new ArgumentNullException("reader");
             }
             ImageUrl = imageUrl;
