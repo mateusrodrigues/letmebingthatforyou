@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
+using Lmbtfy.UnitTests.Extensions;
 using Lmbtfy.Web.Models;
 using Moq;
-using UnitTests.Extensions;
 using Xunit;
 
 namespace Lmbtfy.UnitTests.Models

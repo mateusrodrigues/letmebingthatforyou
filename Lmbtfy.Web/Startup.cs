@@ -26,7 +26,7 @@ namespace Lmbtfy.Web
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddTransient<IDirectoryService, DirectoryService>();
-            services.AddTransient<ImageRepository>();
+            services.AddTransient<IImageRepository, ImageRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

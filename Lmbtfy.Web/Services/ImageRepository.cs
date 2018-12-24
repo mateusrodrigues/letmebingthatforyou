@@ -8,13 +8,12 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace Lmbtfy.Web.Services
 {
-    public class ImageRepository
+    public class ImageRepository : IImageRepository
     {
         List<ImageMetadata> _images = new List<ImageMetadata>();
 
         public ImageRepository(IDirectoryService directory, IHostingEnvironment env)
         {
-            // var rootPath = "wwwroot/images/bg";
             var rootPath = Path.Combine(env.WebRootPath, "images", "bg");
             var files = directory.EnumerateFiles(rootPath, "*.jpg");
 

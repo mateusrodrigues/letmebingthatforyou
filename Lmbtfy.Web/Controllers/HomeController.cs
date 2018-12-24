@@ -15,7 +15,7 @@ namespace Lmbtfy.Web.Controllers
     {
         public ImageMetadata _imageOfTheDay;
 
-        public HomeController(ImageRepository repository)
+        public HomeController(IImageRepository repository)
         {
             _imageOfTheDay = repository.GetImages().GetElementOfTheDay(DateTime.Now);
         }
@@ -58,17 +58,6 @@ namespace Lmbtfy.Web.Controllers
                 return sr.ReadToEnd();
             }
         }
-
-        public ActionResult BackgroundImageCss()
-        {
-            var imageUrl = _imageOfTheDay.ImageUrl;
-
-            var imageMetadata = ImageMetadata.GetImageMetadata(imageUrl);
-            string imageCss = @"#bgDiv {{ BACKGROUND-IMAGE: url({0}); BACKGROUND-REPEAT: no-repeat; }}
-#bgDivFull {{ BACKGROUND-IMAGE: url({0}); BACKGROUND-REPEAT: no-repeat; }}";
-            imageCss = String.Format(CultureInfo.InvariantCulture, imageCss, imageMetadata.ImageUrl);
-            return Content(imageCss, "text/css");
-        }
     }
 
     public static class Helpers
@@ -83,6 +72,7 @@ namespace Lmbtfy.Web.Controllers
                 Scheme = "http",
             };
 
+            // TODO: Commented out
             //if (httpContext.Request.IsLocal)
             //{
             //    uriBuilder.Port = httpContext.Request.Url.Port;
