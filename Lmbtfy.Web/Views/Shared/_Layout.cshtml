@@ -1,6 +1,6 @@
 ﻿@using Lmbtfy.Web.Extensions;
 @using Lmbtfy.Web.Models;
-@inject Lmbtfy.Web.Services.ImageRepository _image
+@inject Lmbtfy.Web.Services.IImageRepository _image
 @{ 
     var imageUrl = _image.GetImages().GetElementOfTheDay(DateTime.Now).ImageUrl;
     var imageMetadata = ImageMetadata.GetImageMetadata(imageUrl);
