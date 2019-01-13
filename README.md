@@ -1,5 +1,7 @@
 # LetMeBingThatForYou
 
+[![Build Status](https://mateusrodrigues.visualstudio.com/letmebingthatforyou/_apis/build/status/letmebingthatforyou-rg%20-%20CI?branchName=master)](https://mateusrodrigues.visualstudio.com/letmebingthatforyou/_build/latest?definitionId=8?branchName=master)
+
 Despite what our well intentioned teachers told us in elementary school, there 
 is such a thing as a stupid question. And stupid questions deserve snarky 
 answers.
@@ -9,10 +11,6 @@ that love to bother you with their question rather than simply Bing it
 themselves. While answering such questions in a funny manner, you’re also 
 educating those people on how to use search. “Teach a man to fish” as they say. 
 :trollface:
-
-## Build Status
-[![Build Status](https://mateusrodrigues.visualstudio.com/letmebingthatforyou/_apis/build/status/letmebingthatforyou-rg%20-%20CI?branchName=master)](https://mateusrodrigues.visualstudio.com/letmebingthatforyou/_build/latest?definitionId=8?branchName=master)
-
 
 ## Development
 * Maarten Balliauw
