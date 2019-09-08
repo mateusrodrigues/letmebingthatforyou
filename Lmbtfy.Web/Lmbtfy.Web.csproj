@@ -6,11 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.6" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\css\Bing.css" />
+    <None Include="wwwroot\css\bing.css" />
     <None Include="wwwroot\css\Site.css" />
     <None Include="wwwroot\images\bg\arches.jpg" />
     <None Include="wwwroot\images\bg\arches.jpg.meta" />

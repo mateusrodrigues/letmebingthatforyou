@@ -11,28 +11,49 @@
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" type="text/css" href="~/css/Bing.css" />
+
+    <meta name="keywords" content="bing, google, let me bing that for you, let me google that for you" />
+    <meta name="description" content="Let Me Bing That For You! - For all those people that find it more convenient to bother you with their questions rather than Bing it for themselves." />
+
+    <link rel="stylesheet" type="text/css" href="~/css/bing.css" />
     <link rel="stylesheet" type="text/css" href="~/css/Site.css" />
+    @*<style type="text/css">
+            #bgDiv {
+                background-image: url(@imageMetadata.ImageUrl);
+                background-repeat: no-repeat;
+            }
+
+            #bgDivFull {
+                background-image: url(@imageMetadata.ImageUrl);
+                background-repeat: no-repeat;
+            }
+        </style>*@
     <style type="text/css">
         #bgDiv {
+            opacity: 1;
             background-image: url(@imageMetadata.ImageUrl);
-            background-repeat: no-repeat;
-        }
-
-        #bgDivFull {
-            background-image: url(@imageMetadata.ImageUrl);
-            background-repeat: no-repeat;
         }
     </style>
 
-    <link href="http://bing.com/s/wlflag.ico" rel="icon" />
+    <link href="http://bing.com/sa/simg/bing_p_rr_teal_min.ico" rel="icon" />
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
 
-    @RenderSection("Header")
+    @RenderSection("Header", required: false)
 </head>
 <body>
-    @RenderBody()
+    <table id="hp_table" role="none">
+        <tbody>
+            <tr>
+                <td id="hp_cellCenter" class="hp_hd">
+                    <div id="hp_container">
+                        @RenderBody()
+                        @await Html.PartialAsync("_Footer")
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
