@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <None Include="wwwroot\css\bing.css" />
-    <None Include="wwwroot\css\Site.css" />
+    <None Include="wwwroot\css\site.css" />
     <None Include="wwwroot\images\bg\arches.jpg" />
     <None Include="wwwroot\images\bg\arches.jpg.meta" />
     <None Include="wwwroot\images\bg\balloons.jpg" />
