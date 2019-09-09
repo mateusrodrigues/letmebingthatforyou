@@ -14,18 +14,40 @@
     </div>
     <div class="search_controls">
         <a id="hpinsthk" aria-hidden="true" tabindex="-1" href="javascript:void(0)" h="ID=SERP,5093.1"><span></span></a>
-        <form action="/search" onsubmit="var id = _ge('hpinsthk').getAttribute('h'); return si_T(id);" role="none" id="sb_form" class="sw_box">
+        <form method="get" action="/Home/GenerateUrl" role="none" id="sb_form" class="sw_box">
             <div class="b_searchboxForm" role="search">
                 <input class="b_searchbox" id="sb_form_q" name="q" title="Enter your search term" type="search" value="" maxlength="1000" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
                 <div id="sbicom_loader" style="display:none" data-ptn="Homepage" data-iid="SERP.5096" data-evt="postRBComplete"></div>
                 <div id="sb_go_par" data-sbtip="Request Link"><input type="submit" class="b_searchboxSubmit" id="sb_form_go" tabindex="0" name="go"></div>
-                <input id="sa_qs" name="qs" value="ds" type="hidden"><input type="hidden" value="QBLH" name="form">
             </div>
         </form>
+        <div class="instructions"><span>Type in a question and click the search button</span></div>
     </div>
+    <div id="lmbtfyResult"></div>
 </div>
 <div class="shader_left"></div>
 <div class="shader_right"></div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(function () {
+            var searchForm = $("#sb_form");
+            var searchQuery = $("#sb_form_q");
+            var searchResult = $("#lmbtfyResult");
+
+            searchForm.submit(function (e) {
+                if (searchQuery.val() != "") {
+                    searchResult.load(
+                        searchForm[0].action + '?q=' + escape(searchQuery.val()),
+                        function (result) {
+                            searchResult.show("bounce", "fast");
+                        });
+                }
+                e.preventDefault();
+            });
+        });
+    </script>
+}
 
 @*@section Header {
         

@@ -154,7 +154,9 @@ body ul.credits li a {
 
 .instructions {
     font-weight: bold;
-    margin-top: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fafafa;
+    margin-top: 1em;
     text-align: center;
     font-size: 1.2em;
     border: solid 1px #000;
@@ -163,7 +165,7 @@ body ul.credits li a {
     -moz-opacity: 0.5;
     opacity: 0.5;
     position: relative;
-    height: 30px;
+    height: 2em;
 }
 
     .instructions span {
