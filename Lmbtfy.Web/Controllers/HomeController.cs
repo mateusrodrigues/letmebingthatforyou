@@ -13,11 +13,9 @@ namespace Lmbtfy.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public ImageMetadata _imageOfTheDay;
-
-        public HomeController(IImageRepository repository)
+        public HomeController()
         {
-            _imageOfTheDay = repository.GetImages().GetElementOfTheDay(DateTime.Now);
+            
         }
 
         public ActionResult About()
@@ -29,10 +27,10 @@ namespace Lmbtfy.Web.Controllers
         {
             if (string.IsNullOrEmpty(q))
             {
-                return View(_imageOfTheDay);
+                return View();
             }
             ViewBag.Question = q;
-            return View("BingThis", _imageOfTheDay);
+            return View("BingThis");
         }
 
         public ActionResult GenerateUrl(string q)

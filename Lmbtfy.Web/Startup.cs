@@ -21,8 +21,7 @@ namespace Lmbtfy.Web
             services.AddControllersWithViews();
             services.AddRazorPages();
 
-            services.AddTransient<IDirectoryService, DirectoryService>();
-            services.AddTransient<IImageRepository, ImageRepository>();
+            services.AddTransient<IKeywordService, KeywordService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
