@@ -1,5 +1,4 @@
-﻿using Lmbtfy.Web.Extensions;
-using Lmbtfy.Web.Models;
+﻿using Lmbtfy.Web.Models;
 using Lmbtfy.Web.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,11 +12,9 @@ namespace Lmbtfy.Web.Controllers
 {
     public class HomeController : Controller
     {
-        public ImageMetadata _imageOfTheDay;
-
-        public HomeController(IImageRepository repository)
+        public HomeController()
         {
-            _imageOfTheDay = repository.GetImages().GetElementOfTheDay(DateTime.Now);
+            
         }
 
         public ActionResult About()
@@ -29,19 +26,19 @@ namespace Lmbtfy.Web.Controllers
         {
             if (string.IsNullOrEmpty(q))
             {
-                return View(_imageOfTheDay);
+                return View();
             }
+
             ViewBag.Question = q;
-            return View("BingThis", _imageOfTheDay);
+            return View("BingThis");
         }
 
         public ActionResult GenerateUrl(string q)
         {
-            string virtualPath = Url.RouteUrl("Search", new { q, Controller = "Home", Action = "Index" });
-            string url = Url.ToPublicUrl(HttpContext, virtualPath);
-            string tinyUrl = GenerateTinyUrl(url);
+            string path = Url.ActionLink("Index", "Home", new { q }, "https", Request.Host.Value);
+            string tinyUrl = GenerateTinyUrl(path);
 
-            return PartialView("_GenerateUrl", new GeneratedUrlModel { Url = url, TinyUrl = tinyUrl });
+            return PartialView("_GenerateUrl", new GeneratedUrlModel { Url = path, TinyUrl = tinyUrl });
         }
 
         protected string GenerateTinyUrl(string realUrl)
@@ -57,28 +54,6 @@ namespace Lmbtfy.Web.Controllers
             {
                 return sr.ReadToEnd();
             }
-        }
-    }
-
-    public static class Helpers
-    {
-        public static string ToPublicUrl(this IUrlHelper urlHelper, HttpContext httpContext, string relativeUri)
-        {
-            var uriBuilder = new UriBuilder
-            {
-                Host = httpContext.Request.PathBase,
-                Path = "/",
-                Port = 80,
-                Scheme = "http",
-            };
-
-            // TODO: Commented out
-            //if (httpContext.Request.IsLocal)
-            //{
-            //    uriBuilder.Port = httpContext.Request.Url.Port;
-            //}
-
-            return new Uri(uriBuilder.Uri, relativeUri).AbsoluteUri;
         }
     }
 }

@@ -20,6 +20,7 @@
     HEIGHT: 200px;
     padding: 5px;
     display: none;
+    text-align: center;
     FONT-FAMILY: Segoe UI, Arial, Helvetica, Sans-Serif;
     background: url("../images/resultbg.png");
     background-repeat: repeat-x;
@@ -53,7 +54,7 @@
 #lmbtfyLink {
     font-size: 2em;
     color: White;
-    background: url(buttonbg.png);
+    background: url('../images/buttonbg.png');
     background-repeat: repeat-x;
     height: 50px;
     display: block;
@@ -63,7 +64,7 @@
     margin-right: auto;
     line-height: 50px;
     overflow: hidden;
-    border: solid 1px;
+    border: 0;
 }
 
 #bodyFull {
@@ -154,7 +155,9 @@ body ul.credits li a {
 
 .instructions {
     font-weight: bold;
-    margin-top: 4px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fafafa;
+    margin-top: 1em;
     text-align: center;
     font-size: 1.2em;
     border: solid 1px #000;
@@ -163,7 +166,7 @@ body ul.credits li a {
     -moz-opacity: 0.5;
     opacity: 0.5;
     position: relative;
-    height: 30px;
+    height: 2em;
 }
 
     .instructions span {

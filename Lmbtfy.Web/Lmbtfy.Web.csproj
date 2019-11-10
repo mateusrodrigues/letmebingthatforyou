@@ -1,17 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <UserSecretsId>aspnet-lmbtfy-bb362907-5c3f-484d-8047-8ca93565872e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.6" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\css\Bing.css" />
-    <None Include="wwwroot\css\Site.css" />
+    <None Include="wwwroot\css\bing.css" />
+    <None Include="wwwroot\css\site.css" />
     <None Include="wwwroot\images\bg\arches.jpg" />
     <None Include="wwwroot\images\bg\arches.jpg.meta" />
     <None Include="wwwroot\images\bg\balloons.jpg" />

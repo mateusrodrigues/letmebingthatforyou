@@ -22,9 +22,6 @@
         return this.each(function() {
             $this = $(this);
             $this.show(type, function() {
-                if (jQuery.browser.msie) {
-                    this.style.removeAttribute('filter');
-                }
                 action();
             });
         });
@@ -47,9 +44,6 @@ $(function() {
     var searchQuery = $("#sb_form_q");
     var fakeMouse = $("#fake_mouse");
     $("#lmbtfyResult").show("bounce", "fast", function() {
-        if (jQuery.browser.msie) {
-            this.style.removeAttribute('filter');
-        }
         $(".step1").doStep("drop", function() {
             $(".step2").doStep("drop", function() {
                 fakeMouse.show("bounce", "fast");

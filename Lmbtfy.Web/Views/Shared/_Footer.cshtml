@@ -1,15 +1,10 @@
-@model Lmbtfy.Web.Models.ImageMetadata
-
-<ul id="sw_footL">
-    <li>
-        &#169;@DateTime.Now.Year <a href="http://haacked.com/" title="Phil's Blog">Phil Haack</a>
-    </li>
-    <li>
-        Image is licensed under <a href="@Model.LicenseUrl" title="@Model.LicenseType">@Model.LicenseType</a> by <a href="@Model.SourceUrl">@Model.Author</a>.
-    </li>
-    <li>
-        <em class="disclaimer">This site is not affiliated with Microsoft nor Bing.com.</em>
-    </li>
-</ul>
-
-<div class="hosting"><a href="https://appharbor.com" title="Hosted on AppHarbor">Thanks to AppHarbor for hosting this site</a></div>
+<div id="hp_bottomCell">
+    <footer id="b_footer" class="b_footer" role="contentinfo" aria-label="Footer" data-priority="0">
+        <div id="b_footerItems">
+            <span>&#169;@DateTime.Now.Year <a href="https://github.com/mateusrodrigues/letmebingthatforyou" title="LMBTFY GitHub Repo" target="_blank">LMBTFY</a> This site is not affiliated with Microsoft or Bing.com</span>
+            <ul>
+                <li>Image provided by <a href="https://source.unsplash.com/" title="Unsplash Source" target="_blank">Unsplash Source</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
