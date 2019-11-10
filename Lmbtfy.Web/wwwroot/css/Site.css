@@ -20,6 +20,7 @@
     HEIGHT: 200px;
     padding: 5px;
     display: none;
+    text-align: center;
     FONT-FAMILY: Segoe UI, Arial, Helvetica, Sans-Serif;
     background: url("../images/resultbg.png");
     background-repeat: repeat-x;
@@ -52,8 +53,8 @@
 
 #lmbtfyLink {
     font-size: 2em;
-    color: Black;
-    background: url(buttonbg.png);
+    color: White;
+    background: url('../images/buttonbg.png');
     background-repeat: repeat-x;
     height: 50px;
     display: block;
@@ -63,7 +64,7 @@
     margin-right: auto;
     line-height: 50px;
     overflow: hidden;
-    border: solid 1px;
+    border: 0;
 }
 
 #bodyFull {

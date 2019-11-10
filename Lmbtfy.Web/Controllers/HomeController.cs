@@ -28,6 +28,7 @@ namespace Lmbtfy.Web.Controllers
             {
                 return View();
             }
+
             ViewBag.Question = q;
             return View("BingThis");
         }
