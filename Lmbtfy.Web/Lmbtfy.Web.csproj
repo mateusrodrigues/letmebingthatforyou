@@ -8,104 +8,15 @@
   <ItemGroup>
     <None Include="wwwroot\css\bing.css" />
     <None Include="wwwroot\css\site.css" />
-    <None Include="wwwroot\images\bg\arches.jpg" />
-    <None Include="wwwroot\images\bg\arches.jpg.meta" />
-    <None Include="wwwroot\images\bg\balloons.jpg" />
-    <None Include="wwwroot\images\bg\balloons.jpg.meta" />
-    <None Include="wwwroot\images\bg\beach.jpg" />
-    <None Include="wwwroot\images\bg\beach.jpg.meta" />
-    <None Include="wwwroot\images\bg\crossing.jpg" />
-    <None Include="wwwroot\images\bg\crossing.jpg.meta" />
-    <None Include="wwwroot\images\bg\field.jpg" />
-    <None Include="wwwroot\images\bg\field.jpg.meta" />
-    <None Include="wwwroot\images\bg\fieldtrees.jpg" />
-    <None Include="wwwroot\images\bg\fieldtrees.jpg.meta" />
-    <None Include="wwwroot\images\bg\hills.jpg" />
-    <None Include="wwwroot\images\bg\hills.jpg.meta" />
-    <None Include="wwwroot\images\bg\landscape.jpg" />
-    <None Include="wwwroot\images\bg\landscape.jpg.meta" />
-    <None Include="wwwroot\images\bg\nightsky.jpg" />
-    <None Include="wwwroot\images\bg\nightsky.jpg.meta" />
-    <None Include="wwwroot\images\bg\ocean.jpg" />
-    <None Include="wwwroot\images\bg\ocean.jpg.meta" />
-    <None Include="wwwroot\images\bg\pool.jpg" />
-    <None Include="wwwroot\images\bg\pool.jpg.meta" />
-    <None Include="wwwroot\images\bg\rural.jpg" />
-    <None Include="wwwroot\images\bg\rural.jpg.meta" />
-    <None Include="wwwroot\images\bg\sea.jpg" />
-    <None Include="wwwroot\images\bg\sea.jpg.meta" />
-    <None Include="wwwroot\images\bg\snow.jpg" />
-    <None Include="wwwroot\images\bg\snow.jpg.meta" />
-    <None Include="wwwroot\images\bg\straw.jpg" />
-    <None Include="wwwroot\images\bg\straw.jpg.meta" />
-    <None Include="wwwroot\images\bg\sunset.jpg" />
-    <None Include="wwwroot\images\bg\sunset.jpg.meta" />
-    <None Include="wwwroot\images\bg\tajmahal.jpg" />
-    <None Include="wwwroot\images\bg\tajmahal.jpg.meta" />
-    <None Include="wwwroot\images\bg\trees.jpg" />
-    <None Include="wwwroot\images\bg\trees.jpg.meta" />
-    <None Include="wwwroot\images\bg\treesky.jpg" />
-    <None Include="wwwroot\images\bg\treesky.jpg.meta" />
-    <None Include="wwwroot\images\buttonbg.png" />
     <None Include="wwwroot\images\mouse_pointer.gif" />
     <None Include="wwwroot\images\resultbg.png" />
     <None Include="wwwroot\js\lmbtfy.js" />
-    <None Include="wwwroot\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <None Include="wwwroot\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <None Include="wwwroot\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <None Include="wwwroot\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <None Include="wwwroot\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <None Include="wwwroot\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <None Include="wwwroot\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <None Include="wwwroot\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <None Include="wwwroot\themes\base\images\ui-icons_222222_256x240.png" />
-    <None Include="wwwroot\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <None Include="wwwroot\themes\base\images\ui-icons_454545_256x240.png" />
-    <None Include="wwwroot\themes\base\images\ui-icons_888888_256x240.png" />
-    <None Include="wwwroot\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <None Include="wwwroot\themes\base\jquery-ui.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.accordion.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.all.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.autocomplete.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.base.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.button.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.core.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.datepicker.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.dialog.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.progressbar.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.resizable.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.selectable.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.slider.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.tabs.css" />
-    <None Include="wwwroot\themes\base\jquery.ui.theme.css" />
-    <None Include="wwwroot\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-icons_222222_256x240.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-icons_454545_256x240.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-icons_888888_256x240.png" />
-    <None Include="wwwroot\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
-    <None Include="wwwroot\themes\base\minified\jquery-ui.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.accordion.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.all.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.autocomplete.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.base.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.button.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.core.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.datepicker.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.dialog.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.progressbar.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.resizable.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.selectable.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.slider.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.tabs.min.css" />
-    <None Include="wwwroot\themes\base\minified\jquery.ui.theme.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.0.96" />
   </ItemGroup>
 
 </Project>
