@@ -1,38 +1,59 @@
-﻿@using Lmbtfy.Web.Extensions;
-@using Lmbtfy.Web.Models;
-@inject Lmbtfy.Web.Services.IImageRepository _image
-@{ 
-    var imageUrl = _image.GetImages().GetElementOfTheDay(DateTime.Now).ImageUrl;
-    var imageMetadata = ImageMetadata.GetImageMetadata(imageUrl);
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" type="text/css" href="~/css/Bing.css" />
-    <link rel="stylesheet" type="text/css" href="~/css/Site.css" />
+
+    <meta name="keywords" content="bing, google, let me bing that for you, let me google that for you" />
+    <meta name="description" content="Let Me Bing That For You! - For all those people that find it more convenient to bother you with their questions rather than Bing it for themselves." />
+
+    <link rel="stylesheet" type="text/css" href="~/css/bing.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/fontawesome/css/all.min.css" />
     <style type="text/css">
         #bgDiv {
-            background-image: url(@imageMetadata.ImageUrl);
+            background-image: url(https://source.unsplash.com/featured/1600x900/daily?@keywordService.GetDailyKeyword());
             background-repeat: no-repeat;
         }
 
         #bgDivFull {
-            background-image: url(@imageMetadata.ImageUrl);
+            background-image: url(https://source.unsplash.com/featured/1600x900/daily?@keywordService.GetDailyKeyword());
             background-repeat: no-repeat;
         }
     </style>
 
-    <link href="http://bing.com/s/wlflag.ico" rel="icon" />
+    <link rel="icon" href="~/favicon.ico" />
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
 
-    @RenderSection("Header")
+    <environment include="Production">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89988992-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-89988992-4');
+        </script>
+    </environment>
+
+    @RenderSection("Header", required: false)
 </head>
 <body>
-    @RenderBody()
+    <table id="hp_table" role="none">
+        <tbody>
+            <tr>
+                <td id="hp_cellCenter" class="hp_hd">
+                    <div id="hp_container">
+                        @RenderBody()
+                        @await Html.PartialAsync("_Footer")
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>
