@@ -44,7 +44,7 @@ namespace Lmbtfy.Web.Controllers
         protected string GenerateTinyUrl(string realUrl)
         {
             // prepare the web page we will be asking for
-            var request = (HttpWebRequest)WebRequest.Create("http://tinyurl.com/api-create.php?url=" + realUrl);
+            var request = (HttpWebRequest)WebRequest.Create("https://tinyurl.com/api-create.php?url=" + realUrl);
 
             // execute the request
             request.AllowAutoRedirect = false;
