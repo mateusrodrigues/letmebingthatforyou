@@ -1,6 +1,6 @@
 # LetMeBingThatForYou
 
-[![Build Status](https://mateusrodrigues.visualstudio.com/letmebingthatforyou/_apis/build/status/letmebingthatforyou-rg%20-%20CI?branchName=master)](https://mateusrodrigues.visualstudio.com/letmebingthatforyou/_build/latest?definitionId=8?branchName=master)
+[![Build and Publish](https://github.com/mateusrodrigues/letmebingthatforyou/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/mateusrodrigues/letmebingthatforyou/actions/workflows/build-and-publish.yml)
 
 Despite what our well intentioned teachers told us in elementary school, there 
 is such a thing as a stupid question. And stupid questions deserve snarky 
