@@ -1,4 +1,4 @@
-name: Create and publish Docker image to GH Packages
+name: Build and Publish
 
 on:
   push:
