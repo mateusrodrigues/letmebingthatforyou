@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lmbtfy.Web", "Lmbtfy.Web\Lmbtfy.Web.csproj", "{EB5F205E-1C55-4E2F-99F8-1E97BF6F285F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lmbtfy.Web", "Lmbtfy.Web\Lmbtfy.Web.csproj", "{EB5F205E-1C55-4E2F-99F8-1E97BF6F285F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lmbtfy.UnitTests", "Lmbtfy.UnitTests\Lmbtfy.UnitTests.csproj", "{105BCCA6-CA32-4BA7-BBC4-5E300706AFB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lmbtfy.UnitTests", "Lmbtfy.UnitTests\Lmbtfy.UnitTests.csproj", "{105BCCA6-CA32-4BA7-BBC4-5E300706AFB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B186F57B-7485-4B20-B0EF-B55D5BE172A9}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
