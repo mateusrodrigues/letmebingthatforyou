@@ -1,10 +1,5 @@
 ﻿using Lmbtfy.Web.Models;
-using Lmbtfy.Web.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Routing;
-using System;
-using System.Globalization;
 using System.IO;
 using System.Net;
 
