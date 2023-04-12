@@ -1,6 +1,8 @@
-﻿<h3>BingThis</h3>
+﻿@page "/BingThis/{query}"
 
-<img src="~/images/mouse_pointer.gif" id="fake_mouse" style="display: none;" alt="Fake Mouse Pointer" />
+@inject IJSRuntime JS
+
+<img src="./images/mouse_pointer.gif" id="fake_mouse" style="display: none;" alt="Fake Mouse Pointer" />
 
 <div id="bgDiv">
 </div>
@@ -37,5 +39,15 @@
 <div class="shader_right"></div>
 
 @code {
+    [Parameter]
+    public string? Query { get; set; }
 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync(
+            "setQuery", Query
+        );
+        await JS.InvokeAsync<IJSObjectReference>(
+            "import", "./Pages/BingThis.razor.js");
+    }
 }

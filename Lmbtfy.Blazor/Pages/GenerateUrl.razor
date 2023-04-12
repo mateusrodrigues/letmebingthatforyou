@@ -1,10 +1,11 @@
 ﻿@using System.Net;
 
+@inject IHttpClientFactory ClientFactory
 @inject NavigationManager NavigationManager
 
 <div class="center">
     <h1>Share the link below!</h1>
-    <input id="lmbtfyLink" value="@TinyUrl" />
+    <input id="lmbtfyLink" @bind="@TinyUrl" />
 
     <p>
         Alternatively, provide the direct link: <strong><a href="@Url" title="The Url">@Url</a></strong><br />
@@ -20,29 +21,26 @@
 
     public string? TinyUrl { get; set; }
 
-    protected override void OnAfterRender(bool firstRender)
+    protected override async Task OnInitializedAsync()
     {
-        if (firstRender)
-        {
-            string path = NavigationManager.BaseUri + "?q=" + Query;
-            TinyUrl = GenerateTinyUrl(path);
-        }
+        Url = NavigationManager.BaseUri + $"/BingThis/{Query}";
+        TinyUrl = await GenerateTinyUrl(Url);
     }
 
-    private string GenerateTinyUrl(string? realUrl)
+    private async Task<string> GenerateTinyUrl(string? realUrl)
     {
         if (string.IsNullOrEmpty(realUrl)) return string.Empty;
 
-        // prepare the web page we will be asking for
-        var request = (HttpWebRequest)WebRequest.Create("https://tinyurl.com/api-create.php?url=" + realUrl);
+        var client = ClientFactory.CreateClient("TinyUrl");
+        var response = await client.GetAsync("api-create.php?url=" + realUrl);
 
-        // execute the request
-        request.AllowAutoRedirect = false;
-        var response = (HttpWebResponse)request.GetResponse();
-
-        using (var sr = new StreamReader(response.GetResponseStream()))
+        if (response.IsSuccessStatusCode)
         {
-            return sr.ReadToEnd();
+            var content = await response.Content.ReadAsStringAsync();
+
+            return content;
         }
+
+        return "ERROR";
     }
 }

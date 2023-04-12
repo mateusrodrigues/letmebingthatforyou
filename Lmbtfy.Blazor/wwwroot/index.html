@@ -30,6 +30,13 @@
 <body>
     <div id="app" style="height: 100%">Loading...</div>
 
+    <script>
+        var query = '';
+
+        function setQuery(value) {
+            query = value;
+        }
+    </script>
     <script src="_framework/blazor.webassembly.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js');</script>
 </body>

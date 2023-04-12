@@ -14,6 +14,9 @@ namespace Lmbtfy.Blazor
             builder.RootComponents.Add<HeadOutlet>("head::after");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+            builder.Services.AddHttpClient("TinyUrl", client =>
+                client.BaseAddress = new Uri("https://tinyurl.com"));
+
             builder.Services.AddBlazoredModal();
 
             builder.Services.AddScoped<IKeyworkService, KeywordService>();
