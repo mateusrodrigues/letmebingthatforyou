@@ -1,0 +1,48 @@
+﻿@using System.Net;
+
+@inject NavigationManager NavigationManager
+
+<div class="center">
+    <h1>Share the link below!</h1>
+    <input id="lmbtfyLink" value="@TinyUrl" />
+
+    <p>
+        Alternatively, provide the direct link: <strong><a href="@Url" title="The Url">@Url</a></strong><br />
+        The URL <a href="@TinyUrl" title="Tiny URL">@TinyUrl</a> was shortened using <a href="https://tinyurl.com" title="Tiny Url">TinyUrl.com</a>.
+    </p>
+</div>
+
+@code {
+    [Parameter]
+    public string? Query { get; set; }
+
+    public string? Url { get; set; }
+
+    public string? TinyUrl { get; set; }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+        {
+            string path = NavigationManager.BaseUri + "?q=" + Query;
+            TinyUrl = GenerateTinyUrl(path);
+        }
+    }
+
+    private string GenerateTinyUrl(string? realUrl)
+    {
+        if (string.IsNullOrEmpty(realUrl)) return string.Empty;
+
+        // prepare the web page we will be asking for
+        var request = (HttpWebRequest)WebRequest.Create("https://tinyurl.com/api-create.php?url=" + realUrl);
+
+        // execute the request
+        request.AllowAutoRedirect = false;
+        var response = (HttpWebResponse)request.GetResponse();
+
+        using (var sr = new StreamReader(response.GetResponseStream()))
+        {
+            return sr.ReadToEnd();
+        }
+    }
+}
