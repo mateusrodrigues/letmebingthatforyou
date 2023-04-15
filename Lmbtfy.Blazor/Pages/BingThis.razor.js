@@ -53,7 +53,10 @@ $(function () {
                     fakeMouse.animate({ top: "+=18px", left: "+=10px" }, "fast");
 
                     $(".step3").doStep("drop", function () {
-                        searchQuery.type(query, function () { clickSearch(fakeMouse); });
+                        // Passing query.length as index because for some weird reason
+                        // the setTimeout function isn't working here and only the first
+                        // letter of the query would be input otherwise
+                        searchQuery.type(query, function () { clickSearch(fakeMouse); }, query.length);
                     });
                 });
             });
