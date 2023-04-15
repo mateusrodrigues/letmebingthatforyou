@@ -4,7 +4,6 @@
 @inject NavigationManager NavigationManager
 
 <div class="center">
-    <h1>Share the link below!</h1>
     <input id="lmbtfyLink" @bind="@TinyUrl" />
 
     <p>
@@ -23,7 +22,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        Url = NavigationManager.BaseUri + $"/BingThis/{Query}";
+        Url = NavigationManager.BaseUri + $"BingThis/{Query}";
         TinyUrl = await GenerateTinyUrl(Url);
     }
 

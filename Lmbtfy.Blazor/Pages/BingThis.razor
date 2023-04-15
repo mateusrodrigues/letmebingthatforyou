@@ -47,6 +47,7 @@
         await JS.InvokeVoidAsync(
             "setQuery", Query
         );
+
         await JS.InvokeAsync<IJSObjectReference>(
             "import", "./Pages/BingThis.razor.js");
     }
