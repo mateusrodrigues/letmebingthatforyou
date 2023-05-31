@@ -29,7 +29,7 @@ jobs:
         run: dotnet publish Lmbtfy.Blazor/Lmbtfy.Blazor.csproj -c Release -o release --nologo
 
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact
+        uses: actions/upload-pages-artifact@v1
         with:
           path: release/wwwroot
 
