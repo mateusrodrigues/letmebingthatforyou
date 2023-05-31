@@ -28,9 +28,14 @@ jobs:
       - name: dotnet publish
         run: dotnet publish Lmbtfy.Blazor/Lmbtfy.Blazor.csproj -c Release -o release --nologo
 
-      - name: Commit wwwroot to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact
         with:
-          token: ${{ secrets.PAT }}
-          branch: gh-pages
-          folder: release/wwwroot
+          path: release/wwwroot
+
+      # - name: Commit wwwroot to GitHub Pages
+      #   uses: JamesIves/github-pages-deploy-action@v4
+      #   with:
+      #     token: ${{ secrets.PAT }}
+      #     branch: gh-pages
+      #     folder: release/wwwroot
