@@ -1,0 +1,45 @@
+﻿@using System.Net;
+
+@inject IHttpClientFactory ClientFactory
+@inject NavigationManager NavigationManager
+
+<div class="center">
+    <input id="lmbtfyLink" @bind="@TinyUrl" />
+
+    <p>
+        Alternatively, provide the direct link: <strong><a href="@Url" title="The Url">@Url</a></strong><br />
+        The URL <a href="@TinyUrl" title="Tiny URL">@TinyUrl</a> was shortened using <a href="https://tinyurl.com" title="Tiny Url">TinyUrl.com</a>.
+    </p>
+</div>
+
+@code {
+    [Parameter]
+    public string? Query { get; set; }
+
+    public string? Url { get; set; }
+
+    public string? TinyUrl { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Url = NavigationManager.BaseUri + $"BingThis/{Query}";
+        TinyUrl = await GenerateTinyUrl(Url);
+    }
+
+    private async Task<string> GenerateTinyUrl(string? realUrl)
+    {
+        if (string.IsNullOrEmpty(realUrl)) return string.Empty;
+
+        var client = ClientFactory.CreateClient("TinyUrl");
+        var response = await client.GetAsync("api-create.php?url=" + realUrl);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var content = await response.Content.ReadAsStringAsync();
+
+            return content;
+        }
+
+        return "ERROR";
+    }
+}

@@ -1,16 +1,13 @@
-name: Build and Publish
+name: Build and Deploy
 
 on:
   push:
     branches:
     - master
 
-env:
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
-  build-and-push-image-gh:
-    name: Build and Push Docker image
+  build:
+    name: Build
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -20,22 +17,36 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Log in to the DockerHub
-        uses: docker/login-action@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
         with:
-          username: mateusrodrigues
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          dotnet-version: '6.0.x'
 
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: ${{ env.IMAGE_NAME }}
+      - name: dotnet publish
+        run: dotnet publish Lmbtfy.Blazor/Lmbtfy.Blazor.csproj -c Release -o release --nologo
 
-      - name: Build and push Docker image
-        uses: docker/build-push-action@v3
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          context: ./Lmbtfy.Web
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          path: release/wwwroot
+
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
+
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2 # or the latest "vX.X.X" version tag for this action

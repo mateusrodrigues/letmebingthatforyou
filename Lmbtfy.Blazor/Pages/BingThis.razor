@@ -1,0 +1,54 @@
+﻿@page "/BingThis/{query}"
+
+@inject IJSRuntime JS
+
+<img src="./images/mouse_pointer.gif" id="fake_mouse" style="display: none;" alt="Fake Mouse Pointer" />
+
+<div id="bgDiv">
+</div>
+<div id="sbox" class="sw_sform">
+    <div class="hp_sw_logo hpcLogoWhite">
+        <h1 class="a11yhide">Bing</h1>
+        Bing
+    </div>
+    <div class="search_controls">
+        <a id="hpinsthk" aria-hidden="true" tabindex="-1" href="javascript:void(0)" h="ID=SERP,5093.1"><span></span></a>
+        <form method="get" action="https://www.bing.com/search" role="none" id="sb_form" class="sw_box">
+            <div class="b_searchboxForm" role="search">
+                <input class="b_searchbox" id="sb_form_q" name="q" title="Enter your search term" type="search" value="" maxlength="1000" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+                <div id="sbicom_loader" style="display:none" data-ptn="Homepage" data-iid="SERP.5096" data-evt="postRBComplete"></div>
+                <div id="sb_go_par" data-sbtip="Request Link"><input type="submit" class="b_searchboxSubmit" id="sb_form_go" tabindex="0" name="go"></div>
+            </div>
+        </form>
+    </div>
+    <div id="lmbtfyResult" style="background-color: #fff;">
+        <div>
+            <h1>Let me Bing that for you!</h1>
+            <h2 class="step1">
+                Here's how you can do it yourself...
+            </h2>
+            <ul class="steps">
+                <li class="step2">1. Navigate to <a href="https://www.bing.com">Bing.com</a></li>
+                <li class="step3">2. Enter your search query</li>
+                <li class="step4">3. Click the button and behold the results!</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="shader_left"></div>
+<div class="shader_right"></div>
+
+@code {
+    [Parameter]
+    public string? Query { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync(
+            "setQuery", Query
+        );
+
+        await JS.InvokeAsync<IJSObjectReference>(
+            "import", "./Pages/BingThis.razor.js");
+    }
+}
