@@ -19,7 +19,7 @@ namespace Lmbtfy.Blazor
 
             builder.Services.AddBlazoredModal();
 
-            builder.Services.AddScoped<IKeyworkService, KeywordService>();
+            builder.Services.AddSingleton<IImageService, ImageService>();
 
             await builder.Build().RunAsync();
         }
