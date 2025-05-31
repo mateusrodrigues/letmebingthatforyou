@@ -19,14 +19,14 @@
                 <input @bind="SearchQuery" class="b_searchbox" id="sb_form_q" name="q" title="Enter your search term" type="search" maxlength="1000" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
                 <div id="sbicom_loader" style="display:none" data-ptn="Homepage" data-iid="SERP.5096" data-evt="postRBComplete"></div>
                 <div id="sb_go_par" data-sbtip="Request Link">
-                    <button @onclick="@(() => DisplayModal())" class="b_searchboxSubmit" id="sb_form_go" tabindex="0" name="go"></button>
+                    <button @onclick="@(DisplayModal)" class="b_searchboxSubmit" id="sb_form_go" tabindex="0" name="go"></button>
                 </div>
             </div>
         </form>
         <div class="instructions"><span>Type in a question and click the search button</span></div>
     </div>
     <div id="lmbtfyResult">
-        
+
     </div>
 </div>
 
