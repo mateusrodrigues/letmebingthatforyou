@@ -68,7 +68,19 @@
 </head>
 
 <body>
-    <div id="app" style="height: 100%">Loading...</div>
+    <div id="app" style="height: 100%">
+        <div class="loading-container">
+            <div class="loading-content">
+                <div class="loading-logo">
+                    <svg class="loading-svg" viewBox="0 0 25 25">
+                        <path d="M20.385 7.77a9.984 9.984 0 0 0-1.951-3.064A9.937 9.937 0 0 0 12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10" style="fill:none;stroke:rgba(255,255,255,0.4);stroke-width:2;stroke-linecap:round"/>
+                        <path class="loading-circle" d="M 22,12 A 10,10 0 0 1 12,22" style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round"/>
+                    </svg>
+                </div>
+                <div class="loading-text">Loading</div>
+            </div>
+        </div>
+    </div>
 
     <script>
         var query = '';
