@@ -50,11 +50,12 @@
     {
         var options = new ModalOptions
         {
-            AnimationType = ModalAnimationType.FadeInOut
+            AnimationType = ModalAnimationType.FadeInOut,
+            HideHeader = true
         };
 
         var parameters = new ModalParameters().Add("Query", Uri.EscapeDataString(SearchQuery ?? string.Empty));
 
-        Modal.Show<GenerateUrl>("Share the link below!", parameters, options);
+        Modal.Show<GenerateUrl>(string.Empty, parameters, options);
     }
 }
