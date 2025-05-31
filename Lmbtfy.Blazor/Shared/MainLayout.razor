@@ -1,4 +1,18 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+@{
+    var currentPath = NavigationManager.Uri;
+    var noIndex = currentPath.Contains("/BingThis/") || currentPath.Contains("/generateurl");
+}
+
+@if (noIndex)
+{
+    <PageTitle>Let Me Bing That For You - Search Result</PageTitle>
+    <HeadContent>
+        <meta name="robots" content="noindex,nofollow" />
+    </HeadContent>
+}
 
 <DynamicBackground />
 
