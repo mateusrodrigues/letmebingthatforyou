@@ -1,6 +1,6 @@
 {
-  "name": "Lmbtfy.Blazor",
-  "short_name": "Lmbtfy.Blazor",
+  "name": "Let Me Bing That For You",
+  "short_name": "LMBTFY",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",
