@@ -2,9 +2,9 @@
 {
     public class ImageService : IImageService
     {
-        public string GetSeed()
+        public int GetIndex()
         {
-            return $"{DateTime.Now:yyyyMMdd}";
+            return (int)DateTime.Today.DayOfWeek + 1;
         }
     }
 }

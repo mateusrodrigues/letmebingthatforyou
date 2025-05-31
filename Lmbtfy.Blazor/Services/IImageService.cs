@@ -2,6 +2,6 @@
 {
     public interface IImageService
     {
-        string GetSeed();
+        int GetIndex();
     }
 }

@@ -1,13 +1,18 @@
 ﻿@inject IImageService ImageService
 
+@{
+    var index = ImageService.GetIndex();
+    var bgUrl = $"images/bg/{index}.jpg";
+}
+
 <style>
     #bgDiv {
-        background-image: url(https://picsum.photos/seed/@{ ImageService.GetSeed(); }/1600/900);
+        background-image: url('@bgUrl');
         background-repeat: no-repeat;
     }
 
     #bgDivFull {
-        background-image: url(https://picsum.photos/seed/@{ ImageService.GetSeed(); }/1600/900);
+        background-image: url('@bgUrl');
         background-repeat: no-repeat;
     }
 </style>
