@@ -19,6 +19,7 @@ namespace Lmbtfy.Blazor
 
             builder.Services.AddBlazoredModal();
 
+            builder.Services.AddHttpClient();
             builder.Services.AddSingleton<IImageService, ImageService>();
 
             await builder.Build().RunAsync();
