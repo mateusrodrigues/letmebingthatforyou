@@ -13,6 +13,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{805A44B6-7ABF-4FD6-A50A-AE5FD4A07B6D}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build-and-publish.yml = .github\workflows\build-and-publish.yml
+		.github\workflows\azure-static-web-apps-gray-grass-006cb4a0f.yml = .github\workflows\azure-static-web-apps-gray-grass-006cb4a0f.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1A05FAFB-2A77-46A7-A015-3A889CA133B8}"
