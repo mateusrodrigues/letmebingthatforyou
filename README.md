@@ -1,6 +1,6 @@
 # LetMeBingThatForYou
 
-[![Build and Publish](https://github.com/mateusrodrigues/letmebingthatforyou/actions/workflows/build-and-publish.yml/badge.svg)](https://github.com/mateusrodrigues/letmebingthatforyou/actions/workflows/build-and-publish.yml)
+[![Azure Static Web Apps CI/CD](https://github.com/mateusrodrigues/letmebingthatforyou/actions/workflows/azure-static-web-apps-gray-grass-006cb4a0f.yml/badge.svg)](https://github.com/mateusrodrigues/letmebingthatforyou/actions/workflows/azure-static-web-apps-gray-grass-006cb4a0f.yml)
 
 Despite what our well intentioned teachers told us in elementary school, there 
 is such a thing as a stupid question. And stupid questions deserve snarky 
